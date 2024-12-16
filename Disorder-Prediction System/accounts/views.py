@@ -109,7 +109,7 @@ def signup_patient(request):
 
     
     else :
-      return render(request,'patient/signup_Form/signup.html')
+      return render(request,'patient/signup_form/signup.html')
 
 
 
