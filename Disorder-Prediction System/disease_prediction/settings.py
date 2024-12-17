@@ -28,8 +28,7 @@ SECRET_KEY = "SECRET_KEY"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["pred-cw0f.onrender.com", "41ce-34-16-184-167.ngrok-free.app"]
-
+ALLOWED_HOSTS = ["*"]
 
 # settings.py
 
