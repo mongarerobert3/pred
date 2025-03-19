@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from datetime import date
 
+from django.core.management import call_command
+
 from django.contrib import messages
 from django.contrib.auth.models import User , auth
 from .models import patient , doctor , diseaseinfo , consultation ,rating_review
@@ -16,7 +18,11 @@ import joblib as jb
 model = jb.load('trainedd_model')
 
 
-
+def run_migrations(request):
+    if request.method == "POST":
+        call_command("migrate")
+        return JsonResponse({"status": "migrations applied"})
+    return JsonResponse({"error": "Invalid request"}, status=400)
 
 def home(request):
 
