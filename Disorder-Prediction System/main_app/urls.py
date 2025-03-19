@@ -27,7 +27,7 @@ urlpatterns = [
     
     path('post', views.post, name='post'),
     path('chat_messages', views.chat_messages, name='chat_messages'),
-    path('apply-migrations/', run_migrations, name='apply-migrations'),
+    path('apply-migrations/', views.run_migrations, name='apply-migrations'),
 
     
 
